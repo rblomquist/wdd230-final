@@ -1,0 +1,103 @@
+@media (min-width: 38em) {
+    
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .fourgrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
+    
+    .onebyfour {
+        grid-column: 1 / span 4;
+    }
+    
+    .onebytwo {
+        grid-column: 1 / span 2;
+    }
+    
+    .threebytwo {
+        grid-column: 3 / span 2;
+    }
+    
+    .floatright {
+        float: right;
+    }
+    
+    .threegrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+    
+    #weather {
+        grid-column: 1 / span 3;
+    
+        display: grid;
+        grid-template-columns: 30% 70%;
+        place-items: center;
+    }
+    
+    #weatherforecast {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    } 
+    
+    #forecastgrid {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #weatherforecast h2{
+        grid-column: 1 / span 3;
+    }
+
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #copyright {
+        grid-column: 1 / span 3;
+    }    
+
+    
+    /* ----- Temple Page ------------ */
+
+    
+    #templesection {
+        grid-column: 1 / span 4;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #templeinformation {
+        grid-column: 1 / span 4;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+    
+    .templecard:hover {
+        transform: scale(105%);
+    }
+    
+    #maininfo {
+        grid-column: 1 / span 3;
+    }
+
+    #aboutgrid {
+        grid-column: 1 / span 3;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    /* ------ Servics Page ------ */
+
+    .smallgrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+}

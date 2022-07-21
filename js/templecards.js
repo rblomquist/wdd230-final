@@ -12,7 +12,6 @@ async function getData() {
     let templeresponse = await fetch(url);
     if (templeresponse.ok) {
         data = await templeresponse.json();
-        console.log(data);
         buildCards(index);
     };
 };
@@ -22,7 +21,6 @@ function buildCards(index) {
     for (let i = 1; i < 5; i++) {
         const div = document.createElement("div");
         div.addEventListener("click", function() {templeInfo(i - 1)});
-        // div.addEventListener("click", hide);
 
         console.log(index);
         div.setAttribute("class", "blackborder templecard");
@@ -151,28 +149,4 @@ function templeInfo(index) {
     document.querySelector(".prayerroll").setAttribute("href", data[index].prayerroll); 
     document.querySelector(".prayerroll").setAttribute("target", "blank");   
     document.querySelector(".prayerroll").textContent = "Add name to the prayer roll";
-};
-
-function hide() {
-    const container1 = document.querySelector("#templeinformation");
-
-    if (container1.hasChildNodes()) {
-        while (container1.hasChildNodes()) {
-            container1.removeChild(container1.firstChild);
-        }
-        container1.classList.remove("active");
-        container1.classList.add("hidden"); 
-    } 
-    else {
-        container1.classList.remove("hidden");
-        container1.classList.add("active"); 
-        container1.append(document.createElement("p"))   
-        // container1.addEventListener("click", function() {templeInfo(i - 1)});
-
-    }
-;}
-
-
-function buildCard(index) {
-
 };

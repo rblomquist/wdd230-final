@@ -5,7 +5,6 @@ let index = 0;
 let weatherurl;
 getData();
 
-console.log(data);
 
 function getApi() {
     weatherurl = data[index].api;
@@ -33,7 +32,6 @@ async function getData() {
     let templeresponse = await fetch(url);
     if (templeresponse.ok) {
         data = await templeresponse.json();
-        console.log(data);
         buildCard(index);
     };
     
@@ -44,7 +42,6 @@ async function getData() {
     let weatherresponse = await fetch(weatherurl);
     if (weatherresponse.ok) {
         weatherdata = await weatherresponse.json();
-        console.log(weatherdata);
         buildCurrentWeather(weatherdata);
         buildForecastCard(weatherdata, 1, 1);
         buildForecastCard(weatherdata, 2, 2);
